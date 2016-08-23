@@ -1,0 +1,16 @@
+body{
+  font-family: 'Roboto';
+}
+.content{
+  padding: 10px;
+}
+table > tbody > tr > td {
+  font-size: 12px;
+}
+table > thead > tr > th {
+  font-size: 14px;
+  width: 1%;
+}
+.btn {
+  margin: 10px;
+}
