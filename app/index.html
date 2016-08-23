@@ -1,0 +1,51 @@
+<html ng-app="myApp">
+<head>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/mystyle.css">
+</head>
+<body ng-controller="ItemsViewController">
+<div class="button-refresh" ng-click="refreshData()">
+  <a class="waves-effect waves-light btn">Refresh</a>
+</div>
+<div class="content">
+  <table class="table highlight">
+    <thead>
+        <tr>
+          <th>Id</th>
+          <th>Version</th>
+          <th>CreatedOn</th>
+          <th>ModifiedOn</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Severity</th>
+          <th>Timestamp</th>
+          <th>node</th>
+          <th>source</th>
+          <th>user</th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr ng-repeat="event in events">
+          <td>{{event.id}}</td>
+          <td>{{event.version}}</td>
+          <td>{{event.createdOn}}</td>
+          <td>{{event.modifiedOn}}</td>
+          <td>{{event.name}}</td>
+          <td>{{event.description}}</td>
+          <td>{{event.severity}}</td>
+          <td>{{event.timestamp}}</td>
+          <td>{{event.tags.node}}</td>
+          <td>{{event.tags.source}}</td>
+          <td>{{event.tags.user}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+<script src="controller.js"></script>
+<script src="services.js"></script>
+</body>
+</html>
